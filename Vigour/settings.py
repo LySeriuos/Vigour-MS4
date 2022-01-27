@@ -82,6 +82,16 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # authentithication using email or username
+ACCOUNT_EMAIL_REQUIRED = True   # email is required for the registration
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # checking if user uses real email by sending confirmation email to check that
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # this requires to enter email two times to check if there is any typos
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'  # url address redirected after login"
+
 WSGI_APPLICATION = 'Vigour.wsgi.application'
 
 
