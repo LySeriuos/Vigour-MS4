@@ -1,1 +1,1 @@
-web: gunicorn VIGOUR-MS4.wsgi:application
+web: gunicorn vigour-ms4.wsgi:application
