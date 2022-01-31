@@ -19,5 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # all the urls we need for login logout password resets and so on.
-     path('', include('home.urls')),
+    path('', include('home.urls')),
 ]
